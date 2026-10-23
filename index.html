@@ -23,7 +23,124 @@
         </div>
     </header>
 
-    <!-- MEMBER 2: CONTINUE THE HTML HERE -->
+<main class="container">
+        <section class="welcome-section">
+            <div>
+                <p class="eyebrow">YOUR PERSONAL STUDY PLANNER</p>
+                <h2>Manage your school tasks</h2>
+                <p class="welcome-text">
+                    Keep track of assignments, projects, and deadlines in one place.
+                </p>
+            </div>
+        </section>
+
+        <section class="stats-grid" aria-label="Task summary">
+            <article class="stat-card">
+                <span class="stat-icon">📚</span>
+                <p>Total Tasks</p>
+                <strong id="totalTasks">0</strong>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-icon">⏳</span>
+                <p>Pending</p>
+                <strong id="pendingTasks">0</strong>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-icon">✅</span>
+                <p>Completed</p>
+                <strong id="completedTasks">0</strong>
+            </article>
+        </section>
+
+        <section class="panel form-panel">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">GET STARTED</p>
+                    <h2>Add a New Task</h2>
+                </div>
+            </div>
+
+            <form id="taskForm">
+                <div class="form-group">
+                    <label for="taskTitle">Task Name</label>
+                    <input
+                        type="text"
+                        id="taskTitle"
+                        placeholder="e.g., Finish System Analysis assignment"
+                        maxlength="100"
+                        required
+                    >
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="taskCategory">Category</label>
+                        <select id="taskCategory">
+                            <option value="Assignment">Assignment</option>
+                            <option value="Project">Project</option>
+                            <option value="Examination">Examination</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="taskDueDate">Due Date</label>
+                        <input type="date" id="taskDueDate">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="taskPriority">Priority</label>
+                        <select id="taskPriority">
+                            <option value="Low">Low</option>
+                            <option value="Medium" selected>Medium</option>
+                            <option value="High">High</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="primary-button">
+                    + Add Task
+                </button>
+            </form>
+        </section>
+
+        <section class="panel task-panel">
+            <div class="task-heading">
+                <div>
+                    <p class="eyebrow">YOUR SCHEDULE</p>
+                    <h2>My Tasks</h2>
+                </div>
+
+                <label class="filter-label" for="taskFilter">
+                    Filter:
+                    <select id="taskFilter">
+                        <option value="all">All Tasks</option>
+                        <option value="pending">Pending</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </label>
+            </div>
+
+            <p id="taskMessage" class="message" role="status"
+               aria-live="polite"></p>
+
+            <div id="taskList" class="task-list"></div>
+
+            <div id="emptyState" class="empty-state">
+                <div class="empty-icon">📝</div>
+                <h3>No tasks yet</h3>
+                <p>Add your first school task using the form above.</p>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <p>Student Task Tracker &copy; 2026</p>
+            <p>Plan your work. Achieve your goals.</p>
+        </footer>
+    </main>
+
 
 </body>
 </html>
