@@ -28,7 +28,7 @@ The Student Task Tracker was developed as part of the Git & GitHub Team Workflow
 - `index.html` — Defines the structure and content of the application.
 - `styles.css` — Controls the layout, colors, and responsive design.
 - `script.js` — Handles task management and browser storage.
-- `TEAM_WORKFLOW.md` — Documents the team's workflow and responsibilities.
+
 
 ## Team Contributions
 
